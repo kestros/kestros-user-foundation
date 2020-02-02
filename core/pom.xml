@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+
+  <parent>
+    <groupId>io.kestros.cms</groupId>
+    <artifactId>kestros-user-foundation</artifactId>
+    <version>0.0.1-SNAPSHOT</version>
+  </parent>
+
+  <groupId>io.kestros.cms</groupId>
+  <artifactId>kestros-user-foundation-core</artifactId>
+
+  <packaging>bundle</packaging>
+
+  <name>Kestros User Foundation - Bundle</name>
+
+  <description></description>
+
+  <properties>
+    <rootPackage>io.kestros.cms.user</rootPackage>
+    <bundleCategory>kestros</bundleCategory>
+  </properties>
+
+  <dependencies>
+
+    <!-- Kestros Commons Depenedencies -->
+    <dependency>
+      <groupId>io.kestros.commons</groupId>
+      <artifactId>structured-sling-models</artifactId>
+    </dependency>
+  </dependencies>
+
+  <build>
+    <sourceDirectory>src/main/java</sourceDirectory>
+    <testSourceDirectory>src/test/java</testSourceDirectory>
+  </build>
+
+</project>
