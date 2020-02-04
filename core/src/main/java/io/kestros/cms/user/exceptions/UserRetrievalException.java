@@ -17,7 +17,7 @@
  * under the License.
  */
 
-package io.kestros.kestros.cms.user.exceptions;
+package io.kestros.cms.user.exceptions;
 
 public class UserRetrievalException extends Exception {
 

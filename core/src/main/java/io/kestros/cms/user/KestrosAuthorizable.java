@@ -17,11 +17,11 @@
  * under the License.
  */
 
-package io.kestros.kestros.cms.user;
+package io.kestros.cms.user;
 
+import io.kestros.cms.user.group.KestrosUserGroup;
+import io.kestros.cms.user.services.KestrosUserService;
 import io.kestros.commons.structuredslingmodels.BaseResource;
-import io.kestros.kestros.cms.user.group.KestrosUserGroup;
-import io.kestros.kestros.cms.user.services.KestrosUserService;
 import java.util.List;
 import javax.annotation.Nonnull;
 import org.apache.commons.lang3.StringUtils;

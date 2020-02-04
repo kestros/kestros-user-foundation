@@ -17,7 +17,7 @@
  * under the License.
  */
 
-package io.kestros.kestros.cms.user.group;
+package io.kestros.cms.user.group;
 
 import static org.junit.Assert.assertEquals;
 import static org.mockito.ArgumentMatchers.any;
@@ -27,9 +27,9 @@ import static org.mockito.Mockito.times;
 import static org.mockito.Mockito.verify;
 import static org.mockito.Mockito.when;
 
-import io.kestros.kestros.cms.user.KestrosUser;
-import io.kestros.kestros.cms.user.exceptions.UserGroupRetrievalException;
-import io.kestros.kestros.cms.user.services.KestrosUserService;
+import io.kestros.cms.user.KestrosUser;
+import io.kestros.cms.user.exceptions.UserGroupRetrievalException;
+import io.kestros.cms.user.services.KestrosUserService;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;

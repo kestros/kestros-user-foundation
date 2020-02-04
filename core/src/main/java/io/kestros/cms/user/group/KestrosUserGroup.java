@@ -17,12 +17,12 @@
  * under the License.
  */
 
-package io.kestros.kestros.cms.user.group;
+package io.kestros.cms.user.group;
 
-import io.kestros.kestros.cms.user.KestrosAuthorizable;
-import io.kestros.kestros.cms.user.KestrosUser;
-import io.kestros.kestros.cms.user.exceptions.UserGroupRetrievalException;
-import io.kestros.kestros.cms.user.services.KestrosUserService;
+import io.kestros.cms.user.KestrosAuthorizable;
+import io.kestros.cms.user.KestrosUser;
+import io.kestros.cms.user.exceptions.UserGroupRetrievalException;
+import io.kestros.cms.user.services.KestrosUserService;
 import java.util.Collections;
 import java.util.List;
 import javax.annotation.Nonnull;

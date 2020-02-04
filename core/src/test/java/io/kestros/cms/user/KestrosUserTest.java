@@ -17,7 +17,7 @@
  * under the License.
  */
 
-package io.kestros.kestros.cms.user;
+package io.kestros.cms.user;
 
 import static org.junit.Assert.assertFalse;
 import static org.junit.Assert.assertTrue;
@@ -28,7 +28,7 @@ import static org.mockito.Mockito.mock;
 import static org.mockito.Mockito.spy;
 import static org.mockito.Mockito.when;
 
-import io.kestros.kestros.cms.user.services.KestrosUserService;
+import io.kestros.cms.user.services.KestrosUserService;
 import java.util.HashMap;
 import java.util.Map;
 import javax.jcr.RepositoryException;

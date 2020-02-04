@@ -17,11 +17,11 @@
  * under the License.
  */
 
-package io.kestros.kestros.cms.user;
+package io.kestros.cms.user;
 
-import io.kestros.kestros.cms.user.exceptions.UserRetrievalException;
-import io.kestros.kestros.cms.user.services.KestrosUserService;
-import io.kestros.kestros.cms.user.utils.UserUtils;
+import io.kestros.cms.user.exceptions.UserRetrievalException;
+import io.kestros.cms.user.services.KestrosUserService;
+import io.kestros.cms.user.utils.UserUtils;
 import org.apache.sling.api.resource.Resource;
 import org.apache.sling.models.annotations.Model;
 import org.apache.sling.models.annotations.injectorspecific.OSGiService;

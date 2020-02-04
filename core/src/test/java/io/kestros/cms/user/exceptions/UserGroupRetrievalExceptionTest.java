@@ -17,14 +17,19 @@
  * under the License.
  */
 
-package io.kestros.kestros.cms.user.exceptions;
+package io.kestros.cms.user.exceptions;
 
-public class UserGroupRetrievalException extends Exception {
+import static org.junit.Assert.assertEquals;
 
-  protected UserGroupRetrievalException() {
+import org.junit.Test;
+
+public class UserGroupRetrievalExceptionTest {
+
+  @Test
+  public void testUserGroupRetrievalException() {
+    UserGroupRetrievalException exception = new UserGroupRetrievalException("user-group",
+        "message.");
+    assertEquals("Unable to retrieve group user-group. message.", exception.getMessage());
   }
 
-  public UserGroupRetrievalException(final String groupId, final String message) {
-    super("Unable to retrieve group " + groupId + ". " + message);
-  }
 }

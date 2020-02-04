@@ -17,10 +17,10 @@
  * under the License.
  */
 
-package io.kestros.kestros.cms.user.utils;
+package io.kestros.cms.user.utils;
 
-import io.kestros.kestros.cms.user.exceptions.UserGroupRetrievalException;
-import io.kestros.kestros.cms.user.exceptions.UserRetrievalException;
+import io.kestros.cms.user.exceptions.UserGroupRetrievalException;
+import io.kestros.cms.user.exceptions.UserRetrievalException;
 import javax.annotation.Nonnull;
 import javax.jcr.RepositoryException;
 import javax.jcr.Session;

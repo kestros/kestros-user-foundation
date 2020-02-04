@@ -17,21 +17,21 @@
  * under the License.
  */
 
-package io.kestros.kestros.cms.user.services;
+package io.kestros.cms.user.services;
 
+import static io.kestros.cms.user.utils.UserUtils.getJackrabbitAuthorizable;
+import static io.kestros.cms.user.utils.UserUtils.getJackrabbitSession;
+import static io.kestros.cms.user.utils.UserUtils.getJackrabbitUserGroup;
 import static io.kestros.commons.structuredslingmodels.utils.SlingModelUtils.getAllDescendantsOfType;
 import static io.kestros.commons.structuredslingmodels.utils.SlingModelUtils.getResourceAsBaseResource;
-import static io.kestros.kestros.cms.user.utils.UserUtils.getJackrabbitAuthorizable;
-import static io.kestros.kestros.cms.user.utils.UserUtils.getJackrabbitSession;
-import static io.kestros.kestros.cms.user.utils.UserUtils.getJackrabbitUserGroup;
 
+import io.kestros.cms.user.KestrosAuthorizable;
+import io.kestros.cms.user.KestrosUser;
+import io.kestros.cms.user.exceptions.UserGroupRetrievalException;
+import io.kestros.cms.user.exceptions.UserRetrievalException;
+import io.kestros.cms.user.group.KestrosUserGroup;
 import io.kestros.commons.structuredslingmodels.BaseResource;
 import io.kestros.commons.structuredslingmodels.exceptions.ResourceNotFoundException;
-import io.kestros.kestros.cms.user.KestrosAuthorizable;
-import io.kestros.kestros.cms.user.KestrosUser;
-import io.kestros.kestros.cms.user.exceptions.UserGroupRetrievalException;
-import io.kestros.kestros.cms.user.exceptions.UserRetrievalException;
-import io.kestros.kestros.cms.user.group.KestrosUserGroup;
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.Iterator;

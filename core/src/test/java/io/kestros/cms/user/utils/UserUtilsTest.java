@@ -17,7 +17,7 @@
  * under the License.
  */
 
-package io.kestros.kestros.cms.user.utils;
+package io.kestros.cms.user.utils;
 
 import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertNotNull;
@@ -26,8 +26,8 @@ import static org.mockito.Mockito.mock;
 import static org.mockito.Mockito.spy;
 import static org.mockito.Mockito.when;
 
-import io.kestros.kestros.cms.user.exceptions.UserGroupRetrievalException;
-import io.kestros.kestros.cms.user.exceptions.UserRetrievalException;
+import io.kestros.cms.user.exceptions.UserGroupRetrievalException;
+import io.kestros.cms.user.exceptions.UserRetrievalException;
 import javax.jcr.RepositoryException;
 import javax.jcr.Session;
 import org.apache.jackrabbit.api.JackrabbitSession;

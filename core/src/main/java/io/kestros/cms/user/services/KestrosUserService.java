@@ -17,13 +17,13 @@
  * under the License.
  */
 
-package io.kestros.kestros.cms.user.services;
+package io.kestros.cms.user.services;
 
-import io.kestros.kestros.cms.user.KestrosAuthorizable;
-import io.kestros.kestros.cms.user.KestrosUser;
-import io.kestros.kestros.cms.user.exceptions.UserGroupRetrievalException;
-import io.kestros.kestros.cms.user.exceptions.UserRetrievalException;
-import io.kestros.kestros.cms.user.group.KestrosUserGroup;
+import io.kestros.cms.user.KestrosAuthorizable;
+import io.kestros.cms.user.KestrosUser;
+import io.kestros.cms.user.exceptions.UserGroupRetrievalException;
+import io.kestros.cms.user.exceptions.UserRetrievalException;
+import io.kestros.cms.user.group.KestrosUserGroup;
 import java.util.List;
 import javax.jcr.RepositoryException;
 import org.apache.sling.api.resource.ResourceResolver;
