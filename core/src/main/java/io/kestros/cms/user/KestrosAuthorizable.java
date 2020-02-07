@@ -29,6 +29,9 @@ import org.apache.sling.api.resource.Resource;
 import org.apache.sling.models.annotations.Model;
 import org.apache.sling.models.annotations.injectorspecific.OSGiService;
 
+/**
+ * Baseline authorizable instance.  Extended by {@link KestrosUser} and {@link KestrosUserGroup}.
+ */
 @Model(adaptables = Resource.class)
 public class KestrosAuthorizable extends BaseResource {
 
@@ -36,6 +39,7 @@ public class KestrosAuthorizable extends BaseResource {
   private KestrosUserService userService;
 
   @Nonnull
+  @Override
   public String getTitle() {
     return getId();
   }
@@ -50,6 +54,11 @@ public class KestrosAuthorizable extends BaseResource {
     return getProperties().get("rep:principalName", StringUtils.EMPTY);
   }
 
+  /**
+   * {@link KestrosUserGroup} instances that the Authorizable is a member of.
+   *
+   * @return {@link KestrosUserGroup} instances that the Authorizable is a member of.
+   */
   public List<KestrosUserGroup> getMemberOf() {
     return userService.getUserGroupsForAuthorizable(this, getResourceResolver());
   }

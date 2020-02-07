@@ -28,6 +28,9 @@ import org.apache.sling.models.annotations.injectorspecific.OSGiService;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
+/**
+ * Baseline Sling Model for Kestros users.
+ */
 @Model(adaptables = Resource.class,
        resourceType = "rep:User")
 public class KestrosUser extends KestrosAuthorizable {

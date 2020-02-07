@@ -19,11 +19,22 @@
 
 package io.kestros.cms.user.exceptions;
 
+/**
+ * Exception thrown when an expected {@link io.kestros.cms.user.group.KestrosUserGroup} could not be
+ * retrieved.
+ */
 public class UserGroupRetrievalException extends Exception {
 
   protected UserGroupRetrievalException() {
   }
 
+  /**
+   * Exception thrown when an expected {@link io.kestros.cms.user.group.KestrosUserGroup} could not
+   * be retrieved.
+   *
+   * @param groupId Expected group that could not be retrieved.
+   * @param message Cause message.
+   */
   public UserGroupRetrievalException(final String groupId, final String message) {
     super("Unable to retrieve group " + groupId + ". " + message);
   }

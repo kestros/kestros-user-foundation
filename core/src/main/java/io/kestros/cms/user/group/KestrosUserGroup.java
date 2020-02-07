@@ -33,6 +33,9 @@ import org.apache.sling.models.annotations.injectorspecific.OSGiService;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
+/**
+ * Baseline Sling Model for Kestros user groups.
+ */
 @Model(adaptables = Resource.class,
        resourceType = "rep:Group")
 public class KestrosUserGroup extends KestrosAuthorizable {

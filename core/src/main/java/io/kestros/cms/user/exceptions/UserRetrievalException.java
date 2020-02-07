@@ -19,11 +19,22 @@
 
 package io.kestros.cms.user.exceptions;
 
+/**
+ * Exception thrown when an expected {@link io.kestros.cms.user.KestrosUser} could not be
+ * retrieved.
+ */
 public class UserRetrievalException extends Exception {
 
   protected UserRetrievalException() {
   }
 
+  /**
+   * Exception thrown when an expected {@link io.kestros.cms.user.KestrosUser} could not be
+   * retrieved.
+   *
+   * @param userId User that could not be retrieved.
+   * @param message Cause message.
+   */
   public UserRetrievalException(final String userId, final String message) {
     super("Unable to retrieve user " + userId + ". " + message);
   }

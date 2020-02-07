@@ -33,6 +33,9 @@ import org.apache.sling.api.resource.ResourceResolver;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
+/**
+ * Utility methods for retrieving Jackrabbit Users, UserGroups and Authorizables.
+ */
 public class UserUtils {
 
   private static final Logger LOG = LoggerFactory.getLogger(UserUtils.class);
@@ -86,6 +89,15 @@ public class UserUtils {
     }
   }
 
+  /**
+   * Retrieves the specified JackRabbit Authorizable.
+   *
+   * @param id Authorizable to retrieve.
+   * @param resourceResolver ResourceResolver.
+   * @return The specified JackRabbit Authorizable.
+   * @throws RepositoryException Failed to retrieve a JackRabbitUserManager from the
+   *     ResourceResolver.
+   */
   public static Authorizable getJackrabbitAuthorizable(final String id,
       final ResourceResolver resourceResolver) throws RepositoryException {
     return getJackrabbitUserManager(resourceResolver).getAuthorizable(id);
@@ -108,6 +120,14 @@ public class UserUtils {
     throw new RepositoryException("ResourceResolver could not be adapted to Session.");
   }
 
+  /**
+   * Jackrabbit UserManager from the passed ResourceResolver.
+   *
+   * @param resourceResolver ResourceResolver.
+   * @return Jackrabbit UserManager from the passed ResourceResolver.
+   * @throws RepositoryException Could not retrieve a JackRabbit Session from the
+   *     ResourceResolver.
+   */
   public static UserManager getJackrabbitUserManager(final ResourceResolver resourceResolver)
       throws RepositoryException {
     return getJackrabbitSession(resourceResolver).getUserManager();

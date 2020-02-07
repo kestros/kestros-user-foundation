@@ -45,6 +45,9 @@ import org.osgi.service.component.annotations.Component;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
+/**
+ * Retrieves baseline User and Group instances.
+ */
 @Component(service = KestrosUserService.class,
            immediate = true,
            property = "service.ranking:Integer=100")

@@ -28,6 +28,9 @@ import java.util.List;
 import javax.jcr.RepositoryException;
 import org.apache.sling.api.resource.ResourceResolver;
 
+/**
+ * Service for retrieving {@link KestrosUser} and {@link KestrosUserGroup} instances.
+ */
 public interface KestrosUserService {
 
   /**
@@ -35,28 +38,101 @@ public interface KestrosUserService {
    *
    * @param resourceResolver resourceResolver from the current user.
    * @return Current User.
+   * @throws UserRetrievalException Failed to retrieve a current logged in {@link KestrosUser}.
    */
   KestrosUser getCurrentUser(ResourceResolver resourceResolver) throws UserRetrievalException;
 
+  /**
+   * Retrieves a specified {@link KestrosUser}
+   *
+   * @param userId User to retrieve.
+   * @param resourceResolver ResourceResolver.
+   * @return Specified {@link KestrosUser}.
+   * @throws UserRetrievalException Expected user was not found or could not be adapted to
+   *     KestrosUser.
+   */
   KestrosUser getUser(String userId, ResourceResolver resourceResolver)
       throws UserRetrievalException;
 
+  /**
+   * Retrieves all KestrosUsers.
+   *
+   * @param resourceResolver ResourceResolver.
+   * @return All KestrosUsers.
+   */
   List<KestrosUser> getAllKestrosUsers(ResourceResolver resourceResolver);
 
+  /**
+   * Retrieves a specified {@link KestrosUserGroup}
+   *
+   * @param groupId UserGroup to retrieve.
+   * @param resourceResolver ResourceResolver.
+   * @return Specified {@link KestrosUser}.
+   * @throws UserGroupRetrievalException Expected user group was not found or could not be
+   *     adapted to KestrosUser.
+   */
   KestrosUserGroup getKestrosUserGroup(String groupId, ResourceResolver resourceResolver)
       throws UserGroupRetrievalException;
 
+  /**
+   * Retrieves all KestrosUserGroups.
+   *
+   * @param resourceResolver ResourceResolver.
+   * @return All KestrosUserGroups.
+   */
   List<KestrosUserGroup> getAllKestrosUserGroups(ResourceResolver resourceResolver);
 
+  /**
+   * Retrieves all {@link KestrosUserGroup} instances that a {@link KestrosUser} or {@link
+   * KestrosUserGroup} belongs to.
+   *
+   * @param authorizable User or Group.
+   * @param resourceResolver ResourceResolver.
+   * @return All {@link KestrosUserGroup} instances that a {@link KestrosUser} or {@link
+   *     KestrosUserGroup} belongs to.
+   */
   List<KestrosUserGroup> getUserGroupsForAuthorizable(KestrosAuthorizable authorizable,
       ResourceResolver resourceResolver);
 
+  /**
+   * Retrieves all User or Group members of a {@link KestrosUserGroup}.
+   *
+   * @param group KestrosUserGroup to get members of.
+   * @param resourceResolver ResourceResolver.
+   * @return all User or Group members of a {@link KestrosUserGroup}.
+   * @throws UserGroupRetrievalException Failed to retrieve the specified {@link
+   *     KestrosUserGroup}
+   * @throws RepositoryException Failed to build member list for specified {@link
+   *     KestrosUserGroup}
+   */
   List<KestrosAuthorizable> getGroupMemberAuthorizables(KestrosUserGroup group,
       ResourceResolver resourceResolver) throws UserGroupRetrievalException, RepositoryException;
 
+  /**
+   * Retrieves all User members of a {@link KestrosUserGroup}.
+   *
+   * @param group KestrosUserGroup to get user members of.
+   * @param resourceResolver ResourceResolver.
+   * @return all User members of a {@link KestrosUserGroup}.
+   * @throws UserGroupRetrievalException Failed to retrieve the specified {@link
+   *     KestrosUserGroup}
+   * @throws RepositoryException Failed to build member list for specified {@link
+   *     KestrosUserGroup}
+   */
   List<KestrosUser> getGroupMemberUsers(KestrosUserGroup group, ResourceResolver resourceResolver)
       throws UserGroupRetrievalException, RepositoryException;
 
+  /**
+   * Retrieves all KestrosUserGroup members of a {@link KestrosUserGroup}.
+   *
+   * @param group KestrosUserGroup to get user members of.
+   * @param resourceResolver ResourceResolver.
+   * @return all Group members of a {@link KestrosUserGroup}.
+   * @throws UserGroupRetrievalException Failed to retrieve the specified {@link
+   *     KestrosUserGroup}
+   * @throws RepositoryException Failed to build member list for specified {@link
+   *     KestrosUserGroup}
+   */
   List<KestrosUserGroup> getGroupMemberGroups(KestrosUserGroup group,
       ResourceResolver resourceResolver) throws UserGroupRetrievalException, RepositoryException;
 
