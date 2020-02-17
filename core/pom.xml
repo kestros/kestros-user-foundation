@@ -35,7 +35,6 @@
 
   <name>Kestros User Foundation - Bundle</name>
 
-  <description></description>
 
   <properties>
     <rootPackage>io.kestros.cms.user</rootPackage>

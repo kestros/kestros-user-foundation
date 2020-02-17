@@ -35,7 +35,7 @@
   <version>0.0.1-SNAPSHOT</version>
 
   <name>Kestros User Foundation</name>
-  <description></description>
+  <description>Foundational Classes for adapting JCR Users and Groups to Sling Models, and Services for retrieving Users and Groups.</description>
   <packaging>pom</packaging>
 
   <modules>
