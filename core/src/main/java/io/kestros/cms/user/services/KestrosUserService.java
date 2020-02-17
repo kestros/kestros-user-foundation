@@ -43,7 +43,7 @@ public interface KestrosUserService {
   KestrosUser getCurrentUser(ResourceResolver resourceResolver) throws UserRetrievalException;
 
   /**
-   * Retrieves a specified {@link KestrosUser}
+   * Retrieves a specified {@link KestrosUser}.
    *
    * @param userId User to retrieve.
    * @param resourceResolver ResourceResolver.
@@ -63,7 +63,7 @@ public interface KestrosUserService {
   List<KestrosUser> getAllKestrosUsers(ResourceResolver resourceResolver);
 
   /**
-   * Retrieves a specified {@link KestrosUserGroup}
+   * Retrieves a specified {@link KestrosUserGroup}.
    *
    * @param groupId UserGroup to retrieve.
    * @param resourceResolver ResourceResolver.
