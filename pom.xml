@@ -31,10 +31,12 @@
 
   <groupId>io.kestros.cms</groupId>
   <artifactId>kestros-user-foundation</artifactId>
-  <version>0.0.1-SNAPSHOT</version>
+  <version>0.0.1</version>
 
   <name>Kestros User Foundation</name>
-  <description>Foundational Classes for adapting JCR Users and Groups to Sling Models, and Services for retrieving Users and Groups.</description>
+  <description>Foundational Classes for adapting JCR Users and Groups to Sling Models, and Services
+    for retrieving Users and Groups.
+  </description>
   <packaging>pom</packaging>
 
   <modules>
