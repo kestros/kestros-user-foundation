@@ -26,12 +26,12 @@
   <parent>
     <groupId>io.kestros.commons</groupId>
     <artifactId>kestros-parent-strict</artifactId>
-    <version>0.0.6</version>
+    <version>0.1.1</version>
   </parent>
 
   <groupId>io.kestros.cms</groupId>
   <artifactId>kestros-user-foundation</artifactId>
-  <version>0.0.2</version>
+  <version>0.1.0</version>
 
   <name>Kestros User Foundation</name>
   <description>Foundational Classes for adapting JCR Users and Groups to Sling Models, and Services
@@ -48,7 +48,7 @@
       <dependency>
         <groupId>io.kestros.commons</groupId>
         <artifactId>kestros-structured-sling-models</artifactId>
-        <version>0.0.2</version>
+        <version>0.1.0</version>
       </dependency>
     </dependencies>
   </dependencyManagement>
