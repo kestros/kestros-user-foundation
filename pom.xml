@@ -31,7 +31,7 @@
 
   <groupId>io.kestros.cms</groupId>
   <artifactId>kestros-user-foundation</artifactId>
-  <version>0.1.1</version>
+  <version>0.1.2-SNAPSHOT</version>
 
   <name>Kestros User Foundation</name>
   <description>Foundational Classes for adapting JCR Users and Groups to Sling Models, and Services
@@ -48,7 +48,7 @@
       <dependency>
         <groupId>io.kestros.commons</groupId>
         <artifactId>kestros-structured-sling-models</artifactId>
-        <version>0.1.1</version>
+        <version>0.1.2-SNAPSHOT</version>
       </dependency>
     </dependencies>
   </dependencyManagement>
