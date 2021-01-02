@@ -26,7 +26,7 @@
   <parent>
     <groupId>io.kestros.commons</groupId>
     <artifactId>kestros-parent-strict</artifactId>
-    <version>0.1.2</version>
+    <version>0.1.3-SNAPSHOT</version>
   </parent>
 
   <groupId>io.kestros.cms</groupId>
@@ -37,19 +37,31 @@
   <description>Foundational Classes for adapting JCR Users and Groups to Sling Models, and Services
     for retrieving Users and Groups.
   </description>
-  <packaging>pom</packaging>
 
-  <modules>
-    <module>core</module>
-  </modules>
+  <packaging>bundle</packaging>
 
-  <dependencyManagement>
-    <dependencies>
-      <dependency>
-        <groupId>io.kestros.commons</groupId>
-        <artifactId>kestros-structured-sling-models</artifactId>
-        <version>0.1.2-SNAPSHOT</version>
-      </dependency>
-    </dependencies>
-  </dependencyManagement>
+  <properties>
+    <rootPackage>io.kestros.cms.user</rootPackage>
+    <bundleCategory>kestros</bundleCategory>
+  </properties>
+
+  <dependencies>
+    <!-- Kestros Commons Depenedencies -->
+    <dependency>
+      <groupId>io.kestros.commons</groupId>
+      <artifactId>kestros-structured-sling-models</artifactId>
+    </dependency>
+  </dependencies>
+
+  <build>
+    <sourceDirectory>src/main/java</sourceDirectory>
+    <testSourceDirectory>src/test/java</testSourceDirectory>
+    <plugins>
+      <plugin>
+        <groupId>org.apache.felix</groupId>
+        <artifactId>maven-bundle-plugin</artifactId>
+      </plugin>
+    </plugins>
+  </build>
+
 </project>
