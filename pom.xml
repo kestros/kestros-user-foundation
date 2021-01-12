@@ -46,7 +46,7 @@
   </properties>
 
   <dependencies>
-    <!-- Kestros Commons Depenedencies -->
+    <!-- Kestros Commons Dependencies -->
     <dependency>
       <groupId>io.kestros.commons</groupId>
       <artifactId>kestros-structured-sling-models</artifactId>
